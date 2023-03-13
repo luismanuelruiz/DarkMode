@@ -10,7 +10,7 @@ export default function App() {
   document.body.style.background = darkMode ? "#2E8BC0":"#000C66";  
   const changeTheme = () => {setDarkMode((c) => (c ? false : true));
     document.body.style.background = darkMode ? "#2E8BC0":"#000C66";
-    localStorage.setItem('darkModeLocal', !darkMode)
+    localStorage.setItem('darkModeLocal', darkMode)
     console.log(localStorage.getItem('darkModeLocal'))
   };  
 
