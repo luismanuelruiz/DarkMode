@@ -10,6 +10,10 @@ export default function App() {
     <div>
       <h1>Hello StackBlitz!</h1>
       <p>Start editing to see some magic happen :)</p>
+      <label class="switch">
+        <input type="checkbox"/>
+        <span class="slider round"></span>
+      </label>
     </div>
   );
 }
