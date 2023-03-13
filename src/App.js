@@ -19,7 +19,7 @@ export default function App() {
       <h1>Hello StackBlitz!</h1>
       <p>Start editing to see some magic happen :)</p>
       <label className="switch">
-        <input checked={darkMode} type="checkbox" onChange={changeTheme} />
+        <input checked={} type="checkbox" onChange={changeTheme} />
         <span className="slider round"></span>
       </label>
       
