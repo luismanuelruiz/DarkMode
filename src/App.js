@@ -7,7 +7,7 @@ export default function App() {
 
   const changeTheme = () => {
     setDarkMode((c) => (c ? false : true));
-    document.body.style.backgroundImage = 'url(./img/background_night.jpg)';
+    document.body.style.backgroundImage = "url(./img/background_night.jpg)";
   };
   console.log(darkMode ? 'Dark' : 'Light');
 
