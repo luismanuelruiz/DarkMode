@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom/client';
 export default function App() {
   const savedMode = localStorage.getItem('darkModeLocal');
   const [darkMode, setDarkMode] = useState(false);
-  document.body.style.background = darkMode ? "#2E8BC0":"#000C66";  
+  document.body.style.background = darkMode ? "#000C66":"#2E8BC0";  
   const changeTheme = () => {setDarkMode((c) => (c ? false : true));
     document.body.style.background = darkMode ? "#2E8BC0":"#000C66";
     localStorage.setItem('darkModeLocal', darkMode)
@@ -19,7 +19,7 @@ export default function App() {
       <h1>Hello StackBlitz!</h1>
       <p>Start editing to see some magic happen :)</p>
       <label className="switch">
-        <input checked={} type="checkbox" onChange={changeTheme} />
+        <input checked= {} type="checkbox" onChange={changeTheme} />
         <span className="slider round"></span>
       </label>
       
