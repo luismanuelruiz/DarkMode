@@ -2,10 +2,12 @@ import React from 'react';
 import './style.css';
 import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
+import uselocalStorage from 'use-local-storage'
 
 export default function App() {
+  //const [darkMode, setDarkMode] = uselocalStorage (darkMode ? true : false);
   const [darkMode, setDarkMode] = useState(false);
-  const darkURL = 'url(https://upload.wikimedia.org/wikipedia/commons/4/49/A_black_image.jpg)';
+  const darkURL = 'url(https://wallpaperaccess.com/full/670449.jpg)';
   const lightURL = 'url(https://upload.wikimedia.org/wikipedia/commons/e/e4/Color-blue.JPG)';
   const changeTheme = () => {setDarkMode((c) => (c ? false : true))};
   console.log(darkMode ? 'Dark' : 'Light');
