@@ -5,7 +5,7 @@ import { useState } from 'react';
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
 
-  const changeTheme = () => {setDarkMode (true)};
+  const changeTheme = () => {};
 
   return (
     <div>
