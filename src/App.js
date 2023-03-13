@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client';
 
 export default function App() {
   const savedMode = localStorage.getItem('darkModeLocal');
-  const [darkMode, setDarkMode] = useState(null);
+  const [darkMode, setDarkMode] = useState(false);
   document.body.style.background = darkMode ? "#2E8BC0":"#000C66";  
   const changeTheme = () => {setDarkMode((c) => (c ? false : true));
     document.body.style.background = darkMode ? "#2E8BC0":"#000C66";
