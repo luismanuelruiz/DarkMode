@@ -5,8 +5,11 @@ import { useState } from 'react';
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
 
-  const changeTheme = () => {setDarkMode((c) => c? false:true )};
-  console.log(darkMode?"Dark":"Light")
+  const changeTheme = () => {
+    setDarkMode((c) => (c ? false : true));
+    document.body.style.backgroundImage = 'url(./img/background_night.jpg)';
+  };
+  console.log(darkMode ? 'Dark' : 'Light');
 
   return (
     <div>
