@@ -21,7 +21,7 @@ export default function App() {
         <input checked={darkMode} type="checkbox" onChange={changeTheme} />
         <span className="slider round"></span>
       </label>
-      
+      <DarkSw />
     </div>
   );
 }
