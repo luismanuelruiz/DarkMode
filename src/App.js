@@ -1,14 +1,14 @@
 import React from 'react';
 import './style.css';
 import { useState } from 'react';
-import ReactDOM from "react-dom/client";
+import ReactDOM from 'react-dom/client';
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   const changeTheme = () => {
     setDarkMode((c) => (c ? false : true));
-    document.body.style.backgroundImage = "url(./img/background_night.jpg)";
+    document.body.style.backgroundImage = 'url(./img/background_2.jpg)';
   };
   console.log(darkMode ? 'Dark' : 'Light');
 
