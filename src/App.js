@@ -12,9 +12,9 @@ export default function App() {
     <div>
       <h1>Hello StackBlitz!</h1>
       <p>Start editing to see some magic happen :)</p>
-      <label class="switch">
+      <label className="switch">
         <input checked={darkMode} type="checkbox" onChange={changeTheme} />
-        <span class="slider round"></span>
+        <span className="slider round"></span>
       </label>
     </div>
   );
