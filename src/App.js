@@ -5,15 +5,12 @@ import ReactDOM from 'react-dom/client';
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const darkURL =
-    'url(https://upload.wikimedia.org/wikipedia/commons/4/49/A_black_image.jpg)';
-  const lightURL = 'url(./img/background.jpg)';
-  const changeTheme = () => {
-    setDarkMode((c) => (c ? false : true));
-
-    document.body.style.backgroundImage = darkMode ? darkMode : lightURL;
-  };
+  const darkURL = 'url(https://upload.wikimedia.org/wikipedia/commons/4/49/A_black_image.jpg)';
+  const lightURL = 'url(https://upload.wikimedia.org/wikipedia/commons/e/e4/Color-blue.JPG)';
+  const changeTheme = () => {setDarkMode((c) => (c ? false : true))};
   console.log(darkMode ? 'Dark' : 'Light');
+  console.log(darkMode ? darkURL : lightURL);
+  document.body.style.backgroundImage = darkMode ? darkURL : lightURL
 
   return (
     <div>
