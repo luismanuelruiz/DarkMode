@@ -4,12 +4,11 @@ import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
 export default function App() {
-  //const [darkMode, setDarkMode] = uselocalStorage (darkMode ? true : false);
-  //localStorage.setItem('darkModeLocal',false);
-  const [darkMode, setDarkMode] = useState(false);
+  console.log(JSON.parse(localStorage.getItem('darkModeLocal')))
+  const [darkMode, setDarkMode] = useState(localStorage.getItem('darkModeLocal')||false);
   const changeTheme = () => {setDarkMode((c) => (c ? false : true));
     document.body.style.background = darkMode ? "#2E8BC0":"#000C66";
-    localStorage.setItem('darkModeLocal', darkMode)
+    localStorage.setItem('darkModeLocal', JSON.stringify(darkMode))
   };  
 
   return (
