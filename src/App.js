@@ -6,7 +6,7 @@ export default function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   const changeTheme = () => {setDarkMode((c) => c? false:true )};
-  console.log(darkMode)
+  console.log(darkMode?"Dark":"Light")
 
   return (
     <div>
