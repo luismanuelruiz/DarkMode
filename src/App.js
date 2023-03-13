@@ -9,8 +9,8 @@ export default function App() {
   document.body.style.background = darkMode ? "#000C66":"#2E8BC0";  
   const changeTheme = () => {setDarkMode((c) => (c ? false : true));
     document.body.style.background = darkMode ? "#2E8BC0":"#000C66";
-    localStorage.setItem('darkModeLocal', darkMode)
-    console.log(darkMode)
+    localStorage.setItem('darkModeLocal', !darkMode)
+    console.log(!darkMode)
     console.log(localStorage.getItem('darkModeLocal'))
   };  
 
@@ -19,7 +19,7 @@ export default function App() {
       <h1>Hello StackBlitz!</h1>
       <p>Start editing to see some magic happen :)</p>
       <label className="switch">
-        <input checked= {} type="checkbox" onChange={changeTheme} />
+        <input checked= {darkMode} type="checkbox" onChange={changeTheme} />
         <span className="slider round"></span>
       </label>
       
