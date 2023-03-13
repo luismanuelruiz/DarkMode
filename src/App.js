@@ -1,26 +1,14 @@
 import React from 'react';
 import './style.css';
 import { useState } from 'react';
-import DarkSw from '/.DarkSw.js';
+import DarkSw from './DarkSw.js';
 
 export default function App() {
-  const savedMode = localStorage.getItem('darkModeLocal');
-  const [darkMode, setDarkMode] = useState(savedMode === 'true' ? true : false);
-  document.body.style.background = darkMode ? '#000C66' : '#2E8BC0';
-  const changeTheme = () => {
-    setDarkMode((c) => (c ? false : true));
-    document.body.style.background = darkMode ? '#2E8BC0' : '#000C66';
-    localStorage.setItem('darkModeLocal', !darkMode);
-  };
 
   return (
     <div>
       <h1>Hello StackBlitz!</h1>
       <p>Start editing to see some magic happen :)</p>
-      <label className="switch">
-        <input checked={darkMode} type="checkbox" onChange={changeTheme} />
-        <span className="slider round"></span>
-      </label>
       <DarkSw />
     </div>
   );
