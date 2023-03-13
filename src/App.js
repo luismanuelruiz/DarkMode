@@ -2,15 +2,14 @@ import React from 'react';
 import './style.css';
 import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import uselocalStorage from 'use-local-storage'
 
 export default function App() {
   //const [darkMode, setDarkMode] = uselocalStorage (darkMode ? true : false);
-  localStorage.setItem(darkModeLocal,false);
+  //localStorage.setItem('darkModeLocal',false);
   const [darkMode, setDarkMode] = useState(false);
   const changeTheme = () => {setDarkMode((c) => (c ? false : true));
     document.body.style.background = darkMode ? "#2E8BC0":"#000C66";
-    localStorage.setItem(darkModeLocal, darkMode)
+    localStorage.setItem('darkModeLocal', darkMode)
   };  
 
   return (
